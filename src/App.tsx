@@ -1,24 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Box } from "@mui/material";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import ResultPage from "./pages/ResultPage";
+import Drawer from "./components/Drawer";
+import TutorialsPage from "./pages/TutorialsPage";
+import TasksPage from "./pages/TasksPage";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" style={{ display: "flex" }}>
+      <Drawer />
+      <Box>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/results" element={<ResultPage />} />
+          <Route path="/tutorials" element={<TutorialsPage />} />
+          <Route path="/tasks" element={<TasksPage />} />
+        </Routes>
+      </Box>
     </div>
   );
 }
