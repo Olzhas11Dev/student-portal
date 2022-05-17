@@ -63,11 +63,7 @@ export default function ResponsiveDrawer(props: Props) {
 
   const goToPage = (item: Ibuttons) => {
     setChoosedBtn(item.title.toLowerCase());
-    if (item.title.toLowerCase() !== "home") {
-      navigate(`${item.title.toLowerCase()}`);
-    } else {
-      navigate("/");
-    }
+    navigate(`/${item.title.toLowerCase()}`);
   };
 
   const drawer = (

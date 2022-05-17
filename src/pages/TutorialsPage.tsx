@@ -1,8 +1,14 @@
 import { Container } from "@mui/material";
 import React from "react";
+import Drawer from "../components/Drawer";
 
 function TutorialsPage() {
-  return <Container sx={{ mt: "60px" }}>I'm a Tutorials Page</Container>;
+  return (
+    <div style={{ display: "flex" }}>
+      <Drawer />
+      <Container sx={{ mt: "60px" }}>I'm a Tutorials Page</Container>;
+    </div>
+  );
 }
 
 export default TutorialsPage;

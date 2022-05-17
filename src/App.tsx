@@ -5,14 +5,17 @@ import ResultPage from "./pages/ResultPage";
 import Drawer from "./components/Drawer";
 import TutorialsPage from "./pages/TutorialsPage";
 import TasksPage from "./pages/TasksPage";
+import SignIn from "./pages/SignIn";
+import SignUp from "./pages/SignUp";
 
 function App() {
   return (
-    <div className="App" style={{ display: "flex" }}>
-      <Drawer />
+    <div className="App">
       <Box>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<SignIn />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/results" element={<ResultPage />} />
           <Route path="/tutorials" element={<TutorialsPage />} />
           <Route path="/tasks" element={<TasksPage />} />
